@@ -19,56 +19,84 @@
     <main>
       <!-- Signup Form Component -->
       <section class="free-trial-offer">
-        <div class="heading">
-          <h2 class="heading__title">Learn to code by watching others</h2>
-          <p class="heading__description">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+        <div class="hero-container">
+          <h2 class="hero__heading">Learn to code by watching others</h2>
+          <p class="hero__subheading">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
         </div>
         <div class="cta">
-          <h3 class="cta__title">Try it free 7 days then $20/mo. thereafter</h3>
-          <form class="cta__form">
+          <form class="cta__form" novalidate autocomplete="off">
           <fieldset>
-            <div class="field">
-              <label class="field__label" for="firstname"></label>
-              <input 
-                class="field__input" 
-                type="text"
-                id="firstname" 
-                name="firstname"
-                placeholder="First Name">
+            <legend>
+              <h3 class="cta__title">Try it free 7 days then $20/mo. thereafter</h3>
+            </legend>
+            <div class="field-container">
+              <div class="field">
+                <input 
+                  class="field__input" 
+                  type="text"
+                  id="firstname" 
+                  name="firstname"
+                  aria-invalid="false"
+                  aria-describedby="firstname-error"
+                  required>
+                <label class="field__label" for="firstname">First Name</label>
+                <p class="form__error-message hidden" aria-live="polite"
+                  id="firstname-error">
+                  First name cannot be empty
+                </p>
+              </div>
+              <div class="field">
+                <input 
+                  class="field__input" 
+                  type="text"
+                  id="lastname" 
+                  name="lastname"
+                  aria-invalid="false"
+                  aria-describedby="lastname-error"
+                  required>
+                <label class="field__label" for="lastname">Last Name</label>
+                <p class="form__error-message hidden" aria-live="polite"
+                  id="lastname-error">
+                  Last name cannot be empty
+                </p>
+              </div>
+              <div class="field">
+                <input 
+                  class="field__input" 
+                  id="email"
+                  name="email"
+                  type="email"
+                  aria-invalid="false"
+                  aria-describedby="email-error"
+                  required>
+                <label class="field__label" for="email">Email Address</label>
+                <p class="form__error-message hidden" aria-live="polite"
+                  id="email-error">
+                  Looks like this is not an email
+                </p>
+              </div>
+              <div class="field">
+                <input 
+                  class="field__input" 
+                  type="password"
+                  id="password"
+                  name="password"
+                  aria-invalid="false"
+                  aria-describedby="password-error"
+                  required>
+                <label class="field__label" for="password">Password</label>
+                <p class="form__error-message hidden" aria-live="polite"
+                  id="password-error">
+                  Password cannot be empty
+                </p>
+              </div>
+              <button class="btn btn__cta" type="submit">
+                Claim your free trial 
+              </button>
+              <p class="cta__terms">
+                By clicking the button, you are agreeing to our <a href="#">Terms and Services</a>
+              </p>
             </div>
-            <div class="field">
-              <label class="field__label" for="lastname"></label>
-              <input 
-                class="field__input" 
-                type="text"
-                id="lastname" 
-                name="lastname"
-                placeholder="Last Name">
-            </div>
-            <div class="field">
-              <label class="field__label" for="email"></label>
-              <input 
-                class="field__input" 
-                type="email"
-                id="email" 
-                name="email"
-                placeholder="Email Address">
-            </div>
-            <div class="field">
-              <label class="field__label" for="password"></label>
-              <input 
-                class="field__input" 
-                type="password"
-                id="password" 
-                name="password"
-                placeholder="Password">
-            </div>
-            <button class="btn btn__cta" type="submit">
-              Claim your free trial 
-            </button>
-            <p class="cta__terms">
-              By clicking the button, you are agreeing to our <a href="#">Terms and Services</a>
-            </p>
           </fieldset>
         </form>
         </div>
