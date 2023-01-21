@@ -1,0 +1,23 @@
+// ___________________________________________________________________
+// Button Styles
+// ___________________________________________________________________
+
+.btn__cta {
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+  color: var(--tertiary-color);
+  cursor: pointer;
+  font-weight: var(--font-weight--semi-bold);
+  margin-bottom: 0.5rem;
+  padding: 0.9375rem 0rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s ease-in-out;
+  width: 100%;
+
+  &:hover {
+    background-color: var(--btn-hover-color);
+  }
+}

@@ -1,0 +1,105 @@
+// ___________________________________________________________________
+// Base Styles
+// ___________________________________________________________________
+
+:root {
+  // Colors
+  --primary-color: hsl(0 100% 74%);
+  --secondary-color: hsl(154 59% 51%);
+  --tertiary-color: hsl(0 0% 100%);
+  --accent-color: hsl(248 32% 49%);
+  --form-primary-color: hsl(249 10% 26%);
+  --form-secondary-color: hsl(246 25% 77%);
+  --form-default-border: hsl(0, 0%, 87%);
+  --btn-hover-color: hsl(154 65% 68%);
+  // Text
+  --font-weight--bold: 700;
+  --font-weight--semi-bold: 600;
+  --font-weight--medium: 500;
+  --font-weight--regular: 400;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.free-trial-offer {
+  background-color: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+.free-trial-offer h2 {
+  color: var(--tertiary-color);
+  font-size: 1.75rem;
+  font-weight: var(--font-weight--bold);
+  letter-spacing: -0.29px;
+  line-height: 1.28;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.free-trial-offer p {
+  color: var(--tertiary-color);
+  font-size: 1rem;
+  font-weight: var(--font-weight--medium);
+  margin-bottom: 4.25rem;
+  text-align: center;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  width: 100%;
+}
+
+input{
+  display: inline-block;
+}
+
+label {
+  display: block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+// Hide or show error messages
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+// Screen reader styles
+.sr-only {
+  border: 0;
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

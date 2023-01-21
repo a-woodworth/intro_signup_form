@@ -1,0 +1,19 @@
+// ___________________________________________________________________
+// Footer Styles
+// ___________________________________________________________________
+
+.attribution {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight--medium);
+  padding-top: 0.5rem;
+  text-align: center;
+
+  a {
+    color: var(--accent-color);
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}

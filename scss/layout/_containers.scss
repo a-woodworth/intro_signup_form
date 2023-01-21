@@ -1,0 +1,14 @@
+// ___________________________________________________________________
+// Containers
+// ___________________________________________________________________
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0 auto 2rem;
+}
+
+.free-trial-offer {
+  background-image: url('images/bg-intro-mobile.png');
+  padding: 5.5rem 1.5rem 4.25rem 1.5rem;
+}

@@ -1,0 +1,71 @@
+// ___________________________________________________________________
+// Form Styles
+// ___________________________________________________________________
+
+.cta__form h3 {
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  color: var(--tertiary-color);
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight--regular);
+  letter-spacing: 0.27px;
+  margin-bottom: 1.5rem;
+  padding: 1.125rem 3rem;
+  text-align: center;
+
+  span {
+    font-weight: var(--font-weight--semi-bold);
+  }
+}
+
+.cta__form p {
+  color: var(--form-secondary-color);
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight--medium);
+  line-height: 1.9;
+  margin: 0;
+  padding: 0rem 0.76rem;
+  text-align: center;
+}
+
+.cta__form a {
+  color: var(--primary-color);
+  font-weight: var(--font-weight--semi-bold);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.field-container {
+  background-color: var(--tertiary-color);
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  padding: 1.5rem;
+}
+
+.field {
+  position: relative;
+
+  input {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px hsl(0, 0%, 100%), 0 0 0 2px hsl(0, 0%, 87%);
+    margin-bottom: 1.25rem;
+    padding: 0.9375rem 0rem 0.9375rem 1.125rem;
+    width: 100%;
+  }
+
+  label {
+    color: var(--form-primary-color);
+    font-weight: var(--font-weight--semi-bold);
+    pointer-events: none;
+    position: absolute;
+    left: 1.125rem;
+    top: 0.625rem;
+    transition: 0.2s;
+  }
+}
+
+
