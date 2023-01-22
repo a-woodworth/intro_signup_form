@@ -58,14 +58,6 @@ legend {
   width: 100%;
 }
 
-input {
-  display: inline-block;
-}
-
-label {
-  display: block;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -149,26 +141,47 @@ a {
   text-decoration: underline;
 }
 
-.field-container {
+.cta__form .field-container {
   background-color: var(--tertiary-color);
   border-radius: 10px;
   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
   padding: 1.5rem;
 }
 
-.field {
+.cta__form .field {
   position: relative;
 }
-.field input {
+.cta__form .field input {
   border: none;
   border-radius: 5px;
   box-shadow: 0 0 0 1px hsl(0deg, 0%, 100%), 0 0 0 2px hsl(0deg, 0%, 87%);
+  color: var(--form-primary-color);
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: var(--font-weight--semi-bold);
   margin-bottom: 1.25rem;
+  outline: 1px solid transparent;
   padding: 0.9375rem 0rem 0.9375rem 1.125rem;
   width: 100%;
 }
-.field label {
+.cta__form .field input:focus {
+  background-color: var(--tertiary-color);
+  box-shadow: 0 0 0 1px hsl(0deg, 0%, 100%), 0 0 0 2px hsl(248deg, 32%, 49%);
+}
+.cta__form .field input:valid {
+  box-shadow: 0 0 0 1px hsl(0deg, 0%, 100%), 0 0 0 2px hsl(0deg, 0%, 87%);
+}
+.cta__form .field input:focus ~ label, .cta__form .field input:valid ~ label {
+  background-color: var(--tertiary-color);
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight--regular);
+  top: -0.75rem;
+  left: 0.75rem;
+  padding: 0 5px 0 5px;
+}
+.cta__form .field label {
   color: var(--form-primary-color);
+  display: block;
   font-weight: var(--font-weight--semi-bold);
   pointer-events: none;
   position: absolute;
