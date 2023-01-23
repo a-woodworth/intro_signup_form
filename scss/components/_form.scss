@@ -2,6 +2,12 @@
 // Form Styles
 // ___________________________________________________________________
 
+.cta {
+  @media (min-width: 68.75rem) {
+    flex-basis: 33.75rem;
+  }
+}
+
 .cta__form h3 {
   background-color: var(--accent-color);
   border-radius: 10px;
@@ -10,7 +16,6 @@
   font-size: 0.9375rem;
   font-weight: var(--font-weight--regular);
   letter-spacing: 0.27px;
-  margin-bottom: 1.5rem;
   padding: 1.125rem 3rem;
   text-align: center;
 
@@ -43,6 +48,10 @@
   border-radius: 10px;
   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
   padding: 1.5rem;
+
+  @media (min-width: 68.75rem) {
+    padding: 2.5rem;
+  }
 }
 
 .cta__form .field {
@@ -62,8 +71,9 @@
     width: 100%;
 
     &:focus {
-      background-color: var(--tertiary-color);
       box-shadow: 0 0 0 1px hsl(0, 0%, 100%), 0 0 0 2px hsl(248, 32%, 49%);
+      outline: 2px dotted hsla(248, 32%, 49%, 0.5);
+      outline-offset: -3px;
     }
 
     &:valid {
@@ -71,7 +81,8 @@
     }
 
     &:focus ~ label,
-    &:valid ~ label {
+    &:valid ~ label,
+    &:not(:placeholder-shown):not(:focus):invalid ~ label {
       background-color: var(--tertiary-color);
       font-size: 0.6875rem;
       font-weight: var(--font-weight--regular);
@@ -79,10 +90,24 @@
       left: 0.75rem;
       padding:0 5px 0 5px;
     }
+
+    &:not(:placeholder-shown):not(:focus):invalid ~ label {
+      color: var(--primary-color);
+    }
+
+    &:not(:placeholder-shown):not(:focus):invalid {
+      box-shadow: 0 0 0 1px hsl(0, 100%, 74%), 0 0 0 2px hsl(0, 100%, 74%);
+    }
+
+    &:not(:placeholder-shown):not(:focus):invalid ~ .error-message,
+    &:not(:placeholder-shown):not(:focus):invalid ~ .error-icon {
+      display: block;
+    }
   }
 
   label {
-    color: var(--form-primary-color);
+    background-color: var(--tertiary-color);
+    color: var(--form-label-color);
     display: block;
     font-weight: var(--font-weight--semi-bold);
     pointer-events: none;
@@ -90,5 +115,24 @@
     left: 1.125rem;
     top: 0.625rem;
     transition: 0.2s;
+  }
+
+  .error-icon {
+    display: none;
+    position: absolute;
+    top: 0.725rem;
+    right: 1rem;
+  }
+
+  .error-message {
+    color: var(--primary-color);
+    display: none;
+    font-size: 0.6875rem;
+    font-style: italic;
+    line-height: 1.5;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    text-align: right;
+    padding: 0;
   }
 }

@@ -4,13 +4,15 @@
 
 :root {
   // Colors
-  --primary-color: hsl(0 100% 74%);
+  --primary-color: hsl(0 100% 68%); // Darkened color to pass AA contrast
   --secondary-color: hsl(154 59% 51%);
   --tertiary-color: hsl(0 0% 100%);
   --accent-color: hsl(248 32% 49%);
   --form-primary-color: hsl(249 10% 26%);
-  --form-secondary-color: hsl(246 25% 77%);
+  --form-secondary-color: hsl(246 18% 52%); // Changed color for contrast
+  --form-label-color: hsl(248, 3%, 47%);
   --form-default-border: hsl(0, 0%, 87%);
+  --btn-text-color: hsl(170 97% 15%); // Changed color for contrast
   --btn-hover-color: hsl(154 65% 68%);
   // Text
   --font-weight--bold: 700;
@@ -46,6 +48,14 @@ html {
   line-height: 1.28;
   margin-bottom: 1rem;
   text-align: center;
+
+  @media (min-width: 68.75rem) {
+    font-size: 3.125rem;
+    letter-spacing: -0.52px;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
 }
 
 .free-trial-offer p {
@@ -54,6 +64,10 @@ html {
   font-weight: var(--font-weight--medium);
   margin-bottom: 4.25rem;
   text-align: center;
+
+  @media (min-width: 68.75rem) {
+    text-align: left;
+  }
 }
 
 fieldset {
@@ -61,6 +75,7 @@ fieldset {
 }
 
 legend {
+  margin-bottom: 1.5rem;
   width: 100%;
 }
 
@@ -74,13 +89,8 @@ a {
   text-decoration: none;
 }
 
-// Hide or show error messages
 .hidden {
   display: none;
-}
-
-.active {
-  display: block;
 }
 
 // Screen reader styles

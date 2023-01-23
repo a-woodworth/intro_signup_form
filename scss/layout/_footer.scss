@@ -3,6 +3,7 @@
 // ___________________________________________________________________
 
 .attribution {
+  color: var(--form-secondary-color);
   font-family: 'Poppins', sans-serif;
   font-size: 0.6875rem;
   font-weight: var(--font-weight--medium);
@@ -10,10 +11,11 @@
   text-align: center;
 
   a {
-    color: var(--accent-color);
+    color: var(--primary-color);
 
     &:hover {
       color: var(--primary-color);
+      text-decoration: underline;
     }
   }
 }

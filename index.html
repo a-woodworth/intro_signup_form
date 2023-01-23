@@ -25,7 +25,7 @@
           <p class="hero__subheading">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
         </div>
         <div class="cta">
-          <form class="cta__form" novalidate autocomplete="off">
+          <form class="cta__form" novalidate>
           <fieldset>
             <legend>
               <h3 class="cta__title"><span>Try it free 7 days</span> then $20/mo. thereafter</h3>
@@ -37,11 +37,13 @@
                   type="text"
                   id="firstname" 
                   name="firstname"
+                  placeholder=" " 
                   aria-invalid="false"
                   aria-describedby="firstname-error"
+                  autocomplete="off"
                   required>
                 <label class="field__label" for="firstname">First Name</label>
-                <p class="form__error-message hidden" aria-live="polite"
+                <p class="error-message"
                   id="firstname-error">
                   First name cannot be empty
                 </p>
@@ -52,11 +54,16 @@
                   type="text"
                   id="lastname" 
                   name="lastname"
+                  placeholder=" "
                   aria-invalid="false"
                   aria-describedby="lastname-error"
+                  autocomplete="off"
                   required>
+                <span class="error-icon">
+                  <img src="images/icon-error.svg" alt="" aria-hidden="true">
+                </span>
                 <label class="field__label" for="lastname">Last Name</label>
-                <p class="form__error-message hidden" aria-live="polite"
+                <p class="error-message"
                   id="lastname-error">
                   Last name cannot be empty
                 </p>
@@ -67,11 +74,16 @@
                   id="email"
                   name="email"
                   type="email"
+                  placeholder=" "
                   aria-invalid="false"
                   aria-describedby="email-error"
+                  autocomplete="off"
                   required>
+                <span class="error-icon">
+                  <img src="images/icon-error.svg" alt="" aria-hidden="true">
+                </span>
                 <label class="field__label" for="email">Email Address</label>
-                <p class="form__error-message hidden" aria-live="polite"
+                <p class="error-message"
                   id="email-error">
                   Looks like this is not an email
                 </p>
@@ -82,11 +94,16 @@
                   type="password"
                   id="password"
                   name="password"
+                  placeholder=" "
                   aria-invalid="false"
                   aria-describedby="password-error"
+                  autocomplete="off"
                   required>
+                <span class="error-icon">
+                  <img src="images/icon-error.svg" alt="" aria-hidden="true">
+                </span>
                 <label class="field__label" for="password">Password</label>
-                <p class="form__error-message hidden" aria-live="polite"
+                <p class="error-message"
                   id="password-error">
                   Password cannot be empty
                 </p>
