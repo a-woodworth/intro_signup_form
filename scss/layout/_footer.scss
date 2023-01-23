@@ -11,10 +11,9 @@
   text-align: center;
 
   a {
-    color: var(--primary-color);
+    color: var(--link-color);
 
     &:hover {
-      color: var(--primary-color);
       text-decoration: underline;
     }
   }

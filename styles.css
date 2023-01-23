@@ -9,6 +9,7 @@
   --form-default-border: hsl(0, 0%, 87%);
   --btn-text-color: hsl(170 97% 15%);
   --btn-hover-color: hsl(154 65% 68%);
+  --link-color: hsl(0 67% 54%);
   --font-weight--bold: 700;
   --font-weight--semi-bold: 600;
   --font-weight--medium: 500;
@@ -152,7 +153,7 @@ a {
 }
 
 .cta__form a {
-  color: var(--primary-color);
+  color: var(--link-color);
   font-weight: var(--font-weight--semi-bold);
 }
 .cta__form a:hover {
@@ -278,9 +279,8 @@ a {
   text-align: center;
 }
 .attribution a {
-  color: var(--primary-color);
+  color: var(--link-color);
 }
 .attribution a:hover {
-  color: var(--primary-color);
   text-decoration: underline;
 }
