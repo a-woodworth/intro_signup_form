@@ -204,9 +204,6 @@ a {
   left: 0.75rem;
   padding: 0 5px 0 5px;
 }
-.cta__form .field input:not(:placeholder-shown):not(:focus):invalid ~ label {
-  color: var(--primary-color);
-}
 .cta__form .field input:not(:placeholder-shown):not(:focus):invalid {
   box-shadow: 0 0 0 1px hsl(0deg, 100%, 74%), 0 0 0 2px hsl(0deg, 100%, 74%);
 }
