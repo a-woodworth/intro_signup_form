@@ -193,22 +193,16 @@ a {
   outline: 2px dotted hsla(248deg, 32%, 49%, 0.5);
   outline-offset: -3px;
 }
-.cta__form .field input:valid {
+.cta__form .field input:valid:not([aria-invalid=true]) {
   box-shadow: 0 0 0 1px hsl(0deg, 0%, 100%), 0 0 0 2px hsl(0deg, 0%, 87%);
 }
-.cta__form .field input:focus ~ label, .cta__form .field input:valid ~ label, .cta__form .field input:not(:placeholder-shown):not(:focus):invalid ~ label {
+.cta__form .field input:focus ~ label, .cta__form .field input:valid ~ label, .cta__form .field input:invalid:where([aria-invalid=true]) ~ label {
   background-color: var(--tertiary-color);
   font-size: 0.6875rem;
   font-weight: var(--font-weight--regular);
   top: -0.75rem;
   left: 0.75rem;
   padding: 0 5px 0 5px;
-}
-.cta__form .field input:not(:placeholder-shown):not(:focus):invalid {
-  box-shadow: 0 0 0 1px hsl(0deg, 100%, 74%), 0 0 0 2px hsl(0deg, 100%, 74%);
-}
-.cta__form .field input:not(:placeholder-shown):not(:focus):invalid ~ .error-message, .cta__form .field input:not(:placeholder-shown):not(:focus):invalid ~ .error-icon {
-  display: block;
 }
 .cta__form .field label {
   background-color: var(--tertiary-color);
@@ -237,6 +231,17 @@ a {
   margin-bottom: 1rem;
   text-align: right;
   padding: 0;
+}
+.cta__form .field [aria-invalid=true] {
+  box-shadow: 0 0 0 1px hsl(0deg, 100%, 74%), 0 0 0 2px hsl(0deg, 100%, 74%);
+}
+.cta__form .field [aria-invalid=true] ~ .error-message,
+.cta__form .field [aria-invalid=true] ~ .error-icon {
+  display: block;
+}
+.cta__form .field [aria-invalid=true]:focus ~ .error-message,
+.cta__form .field [aria-invalid=true]:focus ~ .error-icon {
+  display: none;
 }
 
 .container {

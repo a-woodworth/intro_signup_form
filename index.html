@@ -25,7 +25,7 @@
           <p class="hero__subheading">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
         </div>
         <div class="cta">
-          <form class="cta__form" novalidate>
+          <form action="#" class="cta__form" id="sevenDayTrial" novalidate>
           <fieldset>
             <legend>
               <h3 class="cta__title"><span>Try it free 7 days</span> then $20/mo. thereafter</h3>
@@ -37,16 +37,15 @@
                   type="text"
                   id="firstname" 
                   name="firstname"
-                  placeholder=" " 
-                  aria-invalid="false"
+                  maxlength="50"
                   aria-describedby="firstname-error"
                   autocomplete="off"
                   required>
                 <label class="field__label" for="firstname">First Name</label>
-                <p class="error-message"
-                  id="firstname-error">
-                  First name cannot be empty
-                </p>
+                <span class="error-icon">
+                  <img src="images/icon-error.svg" alt="" aria-hidden="true">
+                </span>
+                <p class="error-message" id="firstname-error"></p>
               </div>
               <div class="field">
                 <input 
@@ -54,8 +53,7 @@
                   type="text"
                   id="lastname" 
                   name="lastname"
-                  placeholder=" "
-                  aria-invalid="false"
+                  maxlength="50"
                   aria-describedby="lastname-error"
                   autocomplete="off"
                   required>
@@ -63,10 +61,7 @@
                   <img src="images/icon-error.svg" alt="" aria-hidden="true">
                 </span>
                 <label class="field__label" for="lastname">Last Name</label>
-                <p class="error-message"
-                  id="lastname-error">
-                  Last name cannot be empty
-                </p>
+                <p class="error-message" id="lastname-error"></p>
               </div>
               <div class="field">
                 <input 
@@ -74,8 +69,7 @@
                   id="email"
                   name="email"
                   type="email"
-                  placeholder=" "
-                  aria-invalid="false"
+                  maxlength="64" 
                   aria-describedby="email-error"
                   autocomplete="off"
                   required>
@@ -83,30 +77,23 @@
                   <img src="images/icon-error.svg" alt="" aria-hidden="true">
                 </span>
                 <label class="field__label" for="email">Email Address</label>
-                <p class="error-message"
-                  id="email-error">
-                  Looks like this is not an email
-                </p>
+                <p class="error-message" id="email-error"></p>
               </div>
               <div class="field">
                 <input 
                   class="field__input" 
                   type="password"
-                  id="password"
+                  id="new-password"
                   name="password"
-                  placeholder=" "
-                  aria-invalid="false"
+                  minlength="8" 
                   aria-describedby="password-error"
-                  autocomplete="off"
+                  autocomplete="new-password"
                   required>
                 <span class="error-icon">
                   <img src="images/icon-error.svg" alt="" aria-hidden="true">
                 </span>
-                <label class="field__label" for="password">Password</label>
-                <p class="error-message"
-                  id="password-error">
-                  Password cannot be empty
-                </p>
+                <label class="field__label" for="new-password">Password</label>
+                <p class="error-message" id="new-password-error"></p>
               </div>
               <button class="btn btn__cta" type="submit">
                 Claim your free trial 
@@ -125,5 +112,6 @@
         <p class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/a-woodworth" target="_blank">a-woodworth</a>.</p>
       </div>
     </footer>
+    <script src="app.js"></script>
   </body>
 </html>
