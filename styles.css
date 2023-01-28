@@ -218,7 +218,7 @@ a {
 .cta__form .field .error-icon {
   display: none;
   position: absolute;
-  top: 0.725rem;
+  top: 0.825rem;
   right: 1rem;
 }
 .cta__form .field .error-message {
