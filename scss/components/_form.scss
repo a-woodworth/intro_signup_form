@@ -73,7 +73,8 @@
       border: 1px solid var(--accent-color);
     }
 
-    &:invalid:where([aria-invalid="true"]) {
+    &:invalid:where([aria-invalid="true"]),
+    &:valid:where([aria-invalid="true"]) {
       border: 2px solid var(--primary-color);
     }
 

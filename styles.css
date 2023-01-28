@@ -190,7 +190,7 @@ a {
 .cta__form .field input:focus {
   border: 1px solid var(--accent-color);
 }
-.cta__form .field input:invalid:where([aria-invalid=true]) {
+.cta__form .field input:invalid:where([aria-invalid=true]), .cta__form .field input:valid:where([aria-invalid=true]) {
   border: 2px solid var(--primary-color);
 }
 .cta__form .field input:focus ~ label, .cta__form .field input:valid ~ label, .cta__form .field input:invalid:where([aria-invalid=true]) ~ label {
