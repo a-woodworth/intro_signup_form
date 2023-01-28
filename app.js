@@ -20,7 +20,7 @@ function validateInput(e) {
   const message = getErrorMessage(input);
   const errorID = `${input.id}-error`;
   const messageDiv = document.getElementById(errorID);
-  const validInput = e.target.checkValidity();
+  const validInput = input.checkValidity();
 
   if (!validInput || value === '') {
     // Set aria attribute on input field
@@ -53,6 +53,10 @@ function validate(form) {
         const error = document.getElementById(`${input.id}-error`);
         error.innerText = getErrorMessage(input);
       });
+      
+      // Direct focus to first input error
+      const errorArray = [...document.querySelectorAll('[aria-invalid="true"]')];
+      errorArray[0].focus();
     }
   });
 
