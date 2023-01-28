@@ -80,6 +80,10 @@
       box-shadow: 0 0 0 1px hsl(0, 0%, 100%), 0 0 0 2px hsl(0, 0%, 87%);
     }
 
+    &:invalid:where([aria-invalid="true"]) {
+      box-shadow: 0 0 0 1px hsl(0, 100%, 74%), 0 0 0 2px hsl(0, 100%, 74%);
+    }
+
     &:focus ~ label,
     &:valid ~ label,
     &:invalid:where([aria-invalid="true"]) ~ label {
@@ -89,6 +93,10 @@
       top: -0.75rem;
       left: 0.75rem;
       padding:0 5px 0 5px;
+
+      &::after {
+        content: ' (required)';
+      }
     }
   }
 
@@ -112,7 +120,7 @@
   }
 
   .error-message {
-    color: var(--primary-color);
+    color: var(--small-text-color);
     display: none;
     font-size: 0.6875rem;
     font-style: italic;
@@ -123,16 +131,11 @@
     padding: 0;
   }
 
-  [aria-invalid="true"] {
-    box-shadow: 0 0 0 1px hsl(0, 100%, 74%), 0 0 0 2px hsl(0, 100%, 74%);
-  }
-
   [aria-invalid="true"] ~ .error-message,
   [aria-invalid="true"] ~ .error-icon {
     display: block;
   }
 
-  [aria-invalid="true"]:focus ~ .error-message,
   [aria-invalid="true"]:focus ~ .error-icon {
     display: none;
   }

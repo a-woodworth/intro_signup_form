@@ -9,7 +9,7 @@
   --form-default-border: hsl(0, 0%, 87%);
   --btn-text-color: hsl(170 97% 15%);
   --btn-hover-color: hsl(154 65% 68%);
-  --link-color: hsl(0 67% 54%);
+  --small-text-color: hsl(0 67% 54%);
   --font-weight--bold: 700;
   --font-weight--semi-bold: 600;
   --font-weight--medium: 500;
@@ -196,6 +196,9 @@ a {
 .cta__form .field input:valid:not([aria-invalid=true]) {
   box-shadow: 0 0 0 1px hsl(0deg, 0%, 100%), 0 0 0 2px hsl(0deg, 0%, 87%);
 }
+.cta__form .field input:invalid:where([aria-invalid=true]) {
+  box-shadow: 0 0 0 1px hsl(0deg, 100%, 74%), 0 0 0 2px hsl(0deg, 100%, 74%);
+}
 .cta__form .field input:focus ~ label, .cta__form .field input:valid ~ label, .cta__form .field input:invalid:where([aria-invalid=true]) ~ label {
   background-color: var(--tertiary-color);
   font-size: 0.6875rem;
@@ -203,6 +206,9 @@ a {
   top: -0.75rem;
   left: 0.75rem;
   padding: 0 5px 0 5px;
+}
+.cta__form .field input:focus ~ label::after, .cta__form .field input:valid ~ label::after, .cta__form .field input:invalid:where([aria-invalid=true]) ~ label::after {
+  content: " (required)";
 }
 .cta__form .field label {
   background-color: var(--tertiary-color);
@@ -222,7 +228,7 @@ a {
   right: 1rem;
 }
 .cta__form .field .error-message {
-  color: var(--primary-color);
+  color: var(--small-text-color);
   display: none;
   font-size: 0.6875rem;
   font-style: italic;
@@ -232,14 +238,10 @@ a {
   text-align: right;
   padding: 0;
 }
-.cta__form .field [aria-invalid=true] {
-  box-shadow: 0 0 0 1px hsl(0deg, 100%, 74%), 0 0 0 2px hsl(0deg, 100%, 74%);
-}
 .cta__form .field [aria-invalid=true] ~ .error-message,
 .cta__form .field [aria-invalid=true] ~ .error-icon {
   display: block;
 }
-.cta__form .field [aria-invalid=true]:focus ~ .error-message,
 .cta__form .field [aria-invalid=true]:focus ~ .error-icon {
   display: none;
 }
@@ -281,7 +283,7 @@ a {
   text-align: center;
 }
 .attribution a {
-  color: var(--link-color);
+  color: var(--small-text-color);
 }
 .attribution a:hover {
   text-decoration: underline;
