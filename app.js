@@ -58,6 +58,9 @@ function validate(form) {
       const errorArray = [...document.querySelectorAll('[aria-invalid="true"]')];
       errorArray[0].focus();
     }
+    if (allValid) {
+      alert('Submission success! Watch for an email to confirm your 7 day free trial.');
+    }
   });
 
   // Check for errors on exiting input field
