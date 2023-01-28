@@ -74,8 +74,14 @@
     }
 
     &:invalid:where([aria-invalid="true"]),
+    // For border on text input with empty spaces
     &:valid:where([aria-invalid="true"]) {
       border: 2px solid var(--primary-color);
+      color: var(--small-text-color);
+    }
+
+    &:valid:where([aria-invalid="false"]) {
+      color: var(--form-primary-color);
     }
 
     &:focus ~ label,
