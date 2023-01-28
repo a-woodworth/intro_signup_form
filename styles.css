@@ -5,8 +5,8 @@
   --accent-color: hsl(248 32% 49%);
   --form-primary-color: hsl(249 10% 26%);
   --form-secondary-color: hsl(246 18% 52%);
-  --form-label-color: hsl(248, 3%, 47%);
-  --form-default-border: hsl(0, 0%, 87%);
+  --form-label-color: hsl(248 3% 47%);
+  --form-default-border: hsl(0 0% 87%);
   --btn-text-color: hsl(170 97% 15%);
   --btn-hover-color: hsl(154 65% 68%);
   --small-text-color: hsl(0 67% 54%);
@@ -178,6 +178,7 @@ a {
 .cta__form .field input {
   border: 1px solid var(--form-default-border);
   border-radius: 5px;
+  caret-color: var(--accent-color);
   color: var(--form-primary-color);
   display: inline-block;
   font-size: 0.875rem;
