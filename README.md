@@ -24,8 +24,7 @@ Users should be able to:
   - The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say *"Looks like this is not an email"*
 
 
-Please Note: 
-I modified this challenge to better meet accessibility standards. 
+Please Note — I modified this challenge to better meet accessibility standards: 
   
   - Colors selected are darker to meet AA on text and improve contrast on headlines/large text.
   - Visible labels were added to input fields on focus. These labels also stay active when an error is displayed.
@@ -41,7 +40,7 @@ I modified this challenge to better meet accessibility standards.
 ![Mobile Sceenshot](/screenshots/mobile-screenshot-375px.png)
 
 ### Links
-- Solution URL: [Solution]()
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/intro-component-with-signup-form-javascript-and-constraint-validation-5_UXdvQdSG)
 - Live Site URL: [Live Site](https://a-woodworth.github.io/intro_signup_form/)
 
 ### Built with
