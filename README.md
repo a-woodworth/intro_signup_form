@@ -23,6 +23,13 @@ Users should be able to:
   - Any `input` field is empty. The message for this error should say *"[Field Name] cannot be empty"*
   - The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say *"Looks like this is not an email"*
 
+
+Please Note: 
+I modified this challenge to better meet accessibility standards. 
+  
+  - Colors selected are darker to meet AA on text and improve contrast on headlines/large text.
+  - Visible labels were added to input fields on focus. These labels also stay active when an error is displayed.
+
 ### Screenshots
 
 **Desktop**
