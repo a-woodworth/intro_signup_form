@@ -86,10 +86,6 @@ a {
   text-decoration: none;
 }
 
-.hidden {
-  display: none;
-}
-
 .sr-only {
   border: 0;
   clip-path: inset(50%);
