@@ -134,7 +134,7 @@ a {
   padding: 1.125rem 3rem;
   text-align: center;
 }
-.cta__form h3 span {
+.cta__form h3 strong {
   font-weight: var(--font-weight--semi-bold);
 }
 
